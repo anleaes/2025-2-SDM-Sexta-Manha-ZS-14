@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class ans(models.Model):
+class Ans(models.Model):
     tempoMaximoHoras = models.TimeField('Tempo Maximo')
     dataInicio = models.DateField('Data Inicio')
     dataLimite = models.DateField('Data Limite')
