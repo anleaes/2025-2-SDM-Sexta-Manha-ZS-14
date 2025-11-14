@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'clientes.apps.ClientesConfig',
+    'ans.apps.AnsConfig',
 ]
 
 MIDDLEWARE = [
