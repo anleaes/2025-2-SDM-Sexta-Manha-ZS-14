@@ -1,3 +1,5 @@
 sacapp/__pycache__/*
 /apps/clientes/__pycache__/*
 /apps/clientes/migrations/*
+/apps/chamados/__pycache__/*
+/apps/chamados/migrations/*
