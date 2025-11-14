@@ -4,3 +4,7 @@ from .models import chamado
 from .serializer import ChamadoSerializer
 
 # Create your views here.
+class ChamadoViewSet(viewsets.ModelViewSet):
+    queryset = chamado.objects.all()
+    serializer_class = ChamadoSerializer  
+    
