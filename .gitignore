@@ -1,7 +1,0 @@
-modeloapp/__pycache__/*
-/apps/clientes/__pycache__/*
-/apps/clientes/migrations/*
-/apps/ans/__pycache__/*
-/apps/ans/migrations/*
-/apps/chamado/__pycache__/*
-/apps/chamado/migrations/*
