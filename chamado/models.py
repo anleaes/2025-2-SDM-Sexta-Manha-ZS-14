@@ -9,4 +9,11 @@ class chamado(models.Model):
     dataFechamento = models.DateField('Data Fechamento', null=True, blank=True) 
     prioridade = models.CharField('Prioridade', choices=[('baixa', 'Baixa'), ('media', 'Média'), ('alta', 'Alta')], max_length=10)
     ans = models.ForeignKey('ans.Ans', on_delete=models.CASCADE, verbose_name='ANS')
-  
+  # Create your models here.
+     class Meta:
+        verbose_name = 'Chamado'
+        verbose_name_plural = 'Chamado'
+        ordering =['id']
+
+    def __str__(self):
+        return f"self.titulo - self.status"
