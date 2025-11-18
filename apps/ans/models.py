@@ -2,8 +2,10 @@ from django.db import models
 
 # Create your models here.
 class Ans(models.Model):
-    name = models.CharField('Nome', max_length=50)
-    description = models.TextField('Descricao', max_length=100)
+    tempoMaximoHoras = models.IntegerField('Tempo Maximo Horas')
+    dataInicio = models.DateField('Data Inicio')
+    dataFim = models.DateField('Data Fim')
+    status = models.CharField('Status', max_length=50)
     
     class Meta:
         verbose_name = 'Ans'
@@ -11,4 +13,4 @@ class Ans(models.Model):
         ordering =['id']
 
     def __str__(self):
-        return self.name
+        return f"self.name" - f"self.status"
