@@ -5,6 +5,6 @@ from .serializer import AnsSerializer
 
 # Create your views here.
 
-class AnsViewSet(viewsets.ModelViewSet):
+class ansViewSet(viewsets.ModelViewSet):
     queryset = Ans.objects.all()
     serializer_class = AnsSerializer  
