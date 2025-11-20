@@ -37,17 +37,7 @@ class Prioridade {
 }
 
 
-class Atendente {
-  - nome : String
-  - email : String
-  - nivelAcesso : String
-  - empresa : Empresa
-  - departamento : Departamento
-  + responderChamado() : void
-  + encerrarChamado() : void
-  + reabrirChamado() : void
-  + registrarAtendimento() : void
-}
+
 
 class Departamento {
   - nome : String
@@ -83,6 +73,22 @@ class Empresa {
   + removerDepartamento() : void
 }
 
+class EmpresaAtendente {
+  - empresa : Empresa
+  - atendente : Atendente
+}
+
+class Atendente {
+  - nome : String
+  - email : String
+  - nivelAcesso : String
+  - departamento : Departamento
+  + responderChamado() : void
+  + encerrarChamado() : void
+  + reabrirChamado() : void
+  + registrarAtendimento() : void
+}
+
 class Avaliacao {
   - nota : int
   - comentario : String
@@ -102,7 +108,8 @@ Avaliacao "1..1" <--* "1..1" Atendimento
 Atendente "1..1" <--* "1..N" Departamento
 Atendimento "1..1" <--* "1..1" Chamado 
 Atendimento *-- Atendente
-Empresa "1..N" *--> "1..1" Atendente 
+EmpresaAtendente "N..N" *--> "1..N" Atendente 
+EmpresaAtendente "N..N" *--> "1..N" Empresa 
 Chamado "1..N" <--* "1..1" Prioridade 
 
 @enduml
