@@ -107,8 +107,8 @@ Avaliacao  <--*  Atendimento : "1..1"
 Atendente  <--*  Departamento : "1..N"
 Atendimento  <--*  Chamado : "1..1"
 Atendimento <--* Atendente : "1..N"
-EmpresaAtendente  *-->  Atendente : "N..N"
-EmpresaAtendente  *-->  Empresa : "N..N"
+EmpresaAtendente  <--*  Atendente : "N..N"
+EmpresaAtendente  <--*  Empresa : "N..N"
 Chamado  <--*  Prioridade : "1..N"
 
 @enduml
