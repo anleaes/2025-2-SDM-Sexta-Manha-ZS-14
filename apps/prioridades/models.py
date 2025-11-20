@@ -1,13 +1,13 @@
 from django.db import models
-from django.core.validators import MinValueValidator, MaxValueValidator
+from django.core.validators import MinValueValidator
 
 # Create your models here.
 
 class Prioridade(models.Model):
     nome = models.CharField('Nome', max_length=50)
     descricao = models.TextField('Descricao', max_length=200)
-    tempoMaximoResposta = models.IntegerField('Tempo Maximo de Resposta (em horas)',[MinValueValidator(1)])
-    tempoMaximoResolucao = models.IntegerField('Tempo Maximo de Resolucao (em horas)',[MinValueValidator(1)])
+    tempoMaximoResposta = models.IntegerField('Tempo Maximo de Resposta (em horas)',validators=[MinValueValidator(1)])
+    tempoMaximoResolucao = models.IntegerField('Tempo Maximo de Resolucao (em horas)',validators=[MinValueValidator(1)])
 
 
     class Meta:
@@ -16,7 +16,6 @@ class Prioridade(models.Model):
         ordering =['id']
 
     def __str__(self):
-        return self.nome - self.descricao 
-    
+        return f'{self.nome} - {self.descricao}' 
     
     
