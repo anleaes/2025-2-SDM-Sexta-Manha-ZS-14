@@ -1,15 +1,38 @@
 @startuml
 title Aplicativo de Serviço de Atendimento ao Cliente (SAC)
 
-class Cliente {
+class Pessoa {
   - nome : String
   - email : String
   - telefone : String
   - endereco : String
+  + atualizarDados() : void
+  + visualizarDados() : void
+}
+
+class Cliente {
+  - cpf : String
   + abrirChamado() : void
   + realizarAvaliacao() : void
   + visualizarChamados() : void
   + atualizarDados() : void
+}
+
+class Empresa {
+  - cnpj : String
+  + cadastrarDepartamento() : void
+  + listarDepartamentos() : void
+  + atualizarDados() : void
+  + removerDepartamento() : void
+}
+
+class Atendente {
+  - nivelAcesso : String
+  - departamento : Departamento
+  + responderChamado() : void
+  + encerrarChamado() : void
+  + reabrirChamado() : void
+  + registrarAtendimento() : void
 }
 
 class Chamado {
@@ -35,13 +58,10 @@ class Prioridade {
   + exibirRegras() : void
 }
 
-
-
-
 class Departamento {
   - nome : String
   - descricao : String
-  - telefoneContato : String
+  - telefone : String
   + listarAtendentes() : void
   + contarChamados() : int
   + adicionarAtendente() : void
@@ -60,32 +80,9 @@ class Atendimento {
   + calcularDuracao() : void
 }
 
-class Empresa {
-  - nome : String
-  - cnpj : String
-  - endereco : String
-  - telefone : String
-  - emailContato : String
-  + cadastrarDepartamento() : void
-  + listarDepartamentos() : void
-  + atualizarDados() : void
-  + removerDepartamento() : void
-}
-
-class EmpresaAtendente {
+class AtendenteEmpresa {
   - empresa : Empresa
   - atendente : Atendente
-}
-
-class Atendente {
-  - nome : String
-  - email : String
-  - nivelAcesso : String
-  - departamento : Departamento
-  + responderChamado() : void
-  + encerrarChamado() : void
-  + reabrirChamado() : void
-  + registrarAtendimento() : void
 }
 
 class Avaliacao {
@@ -107,8 +104,11 @@ Avaliacao  <--*  Atendimento : "1..1"
 Atendente  <--*  Departamento : "1..N"
 Atendimento  <--*  Chamado : "1..1"
 Atendimento <--* Atendente : "1..N"
-EmpresaAtendente  <--*  Atendente : "N..N"
-EmpresaAtendente  <--*  Empresa : "N..N"
+AtendenteEmpresa  <--*  Atendente : "N..N"
+AtendenteEmpresa  <--*  Empresa : "N..N"
 Chamado  <--*  Prioridade : "1..N"
+Pessoa <|-- Cliente : "1..1"
+Pessoa <|-- Atendente : "1..1"
+Pessoa <|-- Empresa : "1..1"
 
 @enduml

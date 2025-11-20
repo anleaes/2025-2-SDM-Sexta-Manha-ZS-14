@@ -3,14 +3,15 @@ from django.core.validators import RegexValidator
 
 # Create your models here.
 
-class Departamento(models.Model):
+class Pessoa(models.Model):
     nome = models.CharField(max_length=100, unique=True)
-    descricao = models.TextField(blank=True, null=True)
+    email = models.EmailField(max_length=100, unique=True)
     telefone = models.CharField(max_length=15,blank=True,validators=[RegexValidator(regex=r'^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$',message='Informe um telefone válido, ex: (51) 99999-8888.')])
+    endereco = models.TextField(max_length=400)
     
     class Meta:
-        verbose_name = 'Departamento'
-        verbose_name_plural = 'Departamentos'
+        verbose_name = 'Pessoa'
+        verbose_name_plural = 'Pessoas'
         ordering =['id']
 
     def __str__(self):

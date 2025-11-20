@@ -17,16 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('clientes/', include('clientes.urls', namespace='clientes')),    
-    path('atendimentos/', include('atendimentos.urls', namespace='atendimentos')),   
-    path('avaliacoes/', include('avaliacoes.urls', namespace='avaliacoes')), 
-    path('prioridades/', include('prioridades.urls', namespace='prioridades')), 
-    path('chamados/', include('chamados.urls', namespace='chamados')),
+    path('clientes/', include('clientes.urls', namespace='clientes')), 
     path('departamentos/', include('departamentos.urls', namespace='departamentos')), 
+    path('prioridades/', include('prioridades.urls', namespace='prioridades')),   
     path('empresas/', include('empresas.urls', namespace='empresas')),
     path('atendentes/', include('atendentes.urls', namespace='atendentes')),
-   
+    path('chamados/', include('chamados.urls', namespace='chamados')),
+    path('atendimentos/', include('atendimentos.urls', namespace='atendimentos')),   
+    path('avaliacoes/', include('avaliacoes.urls', namespace='avaliacoes')), 
 ]

@@ -43,17 +43,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'pessoas.apps.PessoasConfig',
     'clientes.apps.ClientesConfig',
-    'atendimentos.apps.AtendimentosConfig',
-    'avaliacoes.apps.AvaliacoesConfig',
-    'prioridades.apps.PrioridadesConfig',
-    'chamados.apps.ChamadosConfig',
     'departamentos.apps.DepartamentosConfig',
+    'prioridades.apps.PrioridadesConfig',
     'empresas.apps.EmpresasConfig',
     'atendentes.apps.AtendentesConfig',
-
-    
-
+    'chamados.apps.ChamadosConfig',
+    'atendimentos.apps.AtendimentosConfig',
+    'avaliacoes.apps.AvaliacoesConfig',  
 ]
 
 MIDDLEWARE = [

@@ -1,10 +1,10 @@
 /projetosacapp/__pycache__/*
 /apps/clientes/__pycache__/*
 /apps/clientes/migrations/*
-/apps/atendimento/__pycache__/*
-/apps/atendimento/migrations/*
-/apps/avaliacao/__pycache__/*
-/apps/avaliacao/migrations/*
+/apps/atendimentos/__pycache__/*
+/apps/atendimentos/migrations/*
+/apps/avaliacoes/__pycache__/*
+/apps/avaliacoes/migrations/*
 /apps/prioridades/__pycache__/*
 /apps/prioridades/migrations/*
 /apps/chamados/__pycache__/*
@@ -15,3 +15,6 @@
 /apps/empresas/migrations/*
 /apps/atendentes/__pycache__/*
 /apps/atendentes/migrations/*
+/apps/pessoas/__pycache__/*
+/apps/pessoas/migrations/*
+
