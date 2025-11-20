@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'chamados.apps.ChamadosConfig',
     'departamentos.apps.DepartamentosConfig',
     'empresas.apps.EmpresasConfig',
+    'atendentes.apps.AtendentesConfig',
 
     
 

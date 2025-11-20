@@ -13,3 +13,5 @@
 /apps/departamentos/migrations/*
 /apps/empresas/__pycache__/*
 /apps/empresas/migrations/*
+/apps/atendentes/__pycache__/*
+/apps/atendentes/migrations/*
