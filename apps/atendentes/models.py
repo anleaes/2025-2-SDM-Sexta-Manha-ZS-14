@@ -1,13 +1,17 @@
 from django.db import models
 from departamentos.models import Departamento
+from empresas.models import Empresa
+
 # Create your models here.
-NIVEIS_ACESSO = [(1, 'Administrador'),(2, 'Usuário Padrão'),(3, 'Convidado'),]
+
+
 
 class Atendente(models.Model):
     nome = models.CharField('Nome', max_length=50)
     email = models.TextField('Email', max_length=100)
-    nivelAcesso = models.IntegerField('Nível de Acesso',choices=NIVEIS_ACESSO,default=3)
-    departamentos = models.ManyToManyField(Departamento, blank=False)
+    nivelAcesso = models.IntegerField('Nível de Acesso',choices=[(1, 'Administrador'),(2, 'Usuário Padrão'),(3, 'Convidado'),] ,default=3)
+    departamentos = models.ForeignKey(Departamento,on_delete=models.CASCADE)
+    empresas = models.ManyToManyField(Empresa, verbose_name="Empresas") 
 
     class Meta:
         verbose_name = 'Departamento'
@@ -15,5 +19,5 @@ class Atendente(models.Model):
         ordering =['id']
 
     def __str__(self):
-        return f'{self.nome} - {self.get_nivelAcesso_display()} - {self.departamentos.count()}'
+        return f'{self.nome} - {self.nivelAcesso} - {self.departamentos}'
     
