@@ -9,3 +9,5 @@
 /apps/prioridades/migrations/*
 /apps/chamados/__pycache__/*
 /apps/chamados/migrations/*
+/apps/departamentos/__pycache__/*
+/apps/departamentos/migrations/*

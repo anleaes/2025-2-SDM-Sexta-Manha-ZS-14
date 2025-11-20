@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'avaliacoes.apps.AvaliacoesConfig',
     'prioridades.apps.PrioridadesConfig',
     'chamados.apps.ChamadosConfig',
+    'departamentos.apps.DepartamentosConfig',
 
     
 
