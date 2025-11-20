@@ -1,13 +1,13 @@
 from django.db import models
 from clientes.models import Cliente
 from atendimentos.models import Atendimento
-
+from datetime import date
 # Create your models here.
 
 class Avaliacao(models.Model):
     nota = models.CharField('Nota', max_length=20, choices=[('Excelente', 'Excelente'), ('Bom', 'Bom'), ('Regular', 'Regular'), ('Ruim', 'Ruim'), ('Pessimo', 'Pessimo')])
     comentario = models.TextField('Comentario', max_length=500)
-    dataAvaliacao = models.DateField('Data da Avaliacao')
+    dataAvaliacao = models.DateField('Data da Avaliação', default=date.today)
     clientes = models.ForeignKey(Cliente, on_delete=models.CASCADE)
     atendimento = models.OneToOneField(Atendimento, on_delete=models.CASCADE, related_name="avaliacao")
     
