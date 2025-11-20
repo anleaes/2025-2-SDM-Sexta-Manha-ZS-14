@@ -6,3 +6,12 @@ class Clientes(models.Model):
     email = models.EmailField('Email', max_length=100)
     telefone = models.CharField('Telefone', max_length=15)
     endereco = models.CharField('Endereço', max_length=200)
+
+    class Meta:
+        verbose_name = 'Clientes'
+        verbose_name_plural = 'Clientes'
+        ordering =['id']
+
+    def __str__(self):
+        return f"{self.nome} - {self.email}"   
+    
