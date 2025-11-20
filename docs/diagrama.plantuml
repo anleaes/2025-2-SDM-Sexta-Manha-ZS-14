@@ -101,14 +101,14 @@ class Avaliacao {
 }
 
 ' ---- RELACIONAMENTOS ----
-Cliente "1..N" *--> "1..1" Chamado 
-Cliente "1..N" *--> "1..1" Avaliacao 
-Avaliacao "1..1" <--* "1..1" Atendimento 
-Atendente "1..1" <--* "1..N" Departamento
-Atendimento "1..1" <--* "1..1" Chamado 
-Atendimento *-- Atendente
-EmpresaAtendente "N..N" *--> "1..N" Atendente 
-EmpresaAtendente "N..N" *--> "1..N" Empresa 
-Chamado "1..N" <--* "1..1" Prioridade 
+Cliente  *-->  Chamado : "1..N"
+Cliente  *-->  Avaliacao : "1..N"
+Avaliacao  <--*  Atendimento : "1..1"
+Atendente  <--*  Departamento : "1..N"
+Atendimento  <--*  Chamado : "1..1"
+Atendimento <--* Atendente : "1..N"
+EmpresaAtendente  *-->  Atendente : "N..N"
+EmpresaAtendente  *-->  Empresa : "N..N"
+Chamado  <--*  Prioridade : "1..N"
 
 @enduml
