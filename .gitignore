@@ -11,3 +11,5 @@
 /apps/chamados/migrations/*
 /apps/departamentos/__pycache__/*
 /apps/departamentos/migrations/*
+/apps/empresas/__pycache__/*
+/apps/empresas/migrations/*
