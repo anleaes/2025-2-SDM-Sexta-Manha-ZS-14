@@ -17,5 +17,13 @@ class Empresa(models.Model):
     ]
 )
     emailContato = models.EmailField(max_length=30,unique=True)
+    
+    class Meta:
+        verbose_name = 'Empresa'
+        verbose_name_plural = 'Empresas'
+        ordering =['id']
+
+    def __str__(self):
+        return self.name   
 
     
