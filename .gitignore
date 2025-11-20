@@ -7,3 +7,5 @@
 /apps/avaliacao/migrations/*
 /apps/prioridades/__pycache__/*
 /apps/prioridades/migrations/*
+/apps/chamados/__pycache__/*
+/apps/chamados/migrations/*
