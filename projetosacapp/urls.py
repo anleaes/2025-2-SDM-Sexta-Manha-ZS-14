@@ -26,5 +26,6 @@ urlpatterns = [
     path('prioridades/', include('prioridades.urls', namespace='prioridades')), 
     path('chamados/', include('chamados.urls', namespace='chamados')),
     path('departamentos/', include('departamentos.urls', namespace='departamentos')), 
+    path('empresas/', include('empresas.urls', namespace='empresas')),
    
 ]
