@@ -5,3 +5,5 @@
 /apps/atendimento/migrations/*
 /apps/avaliacao/__pycache__/*
 /apps/avaliacao/migrations/*
+/apps/prioridades/__pycache__/*
+/apps/prioridades/migrations/*
