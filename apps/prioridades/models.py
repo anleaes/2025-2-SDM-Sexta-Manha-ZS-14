@@ -8,4 +8,15 @@ class Prioridade(models.Model):
     descricao = models.TextField('Descricao', max_length=200)
     tempoMaximoResposta = models.IntegerField('Tempo Maximo de Resposta (em horas)',[MinValueValidator(1)])
     tempoMaximoResolucao = models.IntegerField('Tempo Maximo de Resolucao (em horas)',[MinValueValidator(1)])
+
+
+    class Meta:
+        verbose_name = 'Prioridades'
+        verbose_name_plural = 'Prioridades'
+        ordering =['id']
+
+    def __str__(self):
+        return self.nome - self.descricao 
+    
+    
     
