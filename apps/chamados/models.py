@@ -12,3 +12,11 @@ class Chamado(models.Model):
     dataFechamento = models.DateTimeField(default=timezone.now, null=True, blank=True)
     prioridades = models.ForeignKey(Prioridade,on_delete=models.CASCADE)
     clientes = models.ForeignKey(Cliente, on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name = 'Chamado'
+        verbose_name_plural = 'Chamados'
+        ordering =['id']
+
+    def __str__(self):
+        return f"{self.titulo}" - f"{self.clientes}"
