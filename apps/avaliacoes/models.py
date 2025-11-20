@@ -10,3 +10,11 @@ class Avaliacao(models.Model):
     dataAvaliacao = models.DateField('Data da Avaliacao')
     clientes = models.ForeignKey(Cliente, on_delete=models.CASCADE)
     atendimento = models.OneToOneField(Atendimento, on_delete=models.CASCADE, related_name="avaliacao")
+    
+    class Meta:
+        verbose_name = 'Avaliacao'
+        verbose_name_plural = 'Avaliacoes'
+        ordering =['id']
+
+    def __str__(self):
+        return f"self.nota - {self.clientes}"
