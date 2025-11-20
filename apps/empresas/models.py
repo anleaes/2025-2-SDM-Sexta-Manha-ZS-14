@@ -25,7 +25,7 @@ class Empresa(models.Model):
         )
     ]
 )
-    emailContato = models.EmailField(max_length=30,unique=True)
+    emailContato = models.EmailField(max_length=100,unique=True)
 
     class Meta:
         verbose_name = 'Empresa'
