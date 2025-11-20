@@ -16,3 +16,10 @@ class Departamento(models.Model):
         )
     ]
 )
+    class Meta:
+        verbose_name = 'Departamento'
+        verbose_name_plural = 'Departamentos'
+        ordering =['id']
+
+    def __str__(self):
+        return f"{self.nome}" - f"{self.telefoneContato}"
