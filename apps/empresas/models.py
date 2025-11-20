@@ -4,7 +4,16 @@ from django.core.validators import RegexValidator
 
 class Empresa(models.Model):
     nome = models.CharField(max_length=255)
-    cnpj = models.CharField(max_length=20, unique=True)
+    cnpj = models.CharField(
+    max_length=18,
+    unique=True,
+    validators=[
+        RegexValidator(
+            regex=r'^\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}$',
+            message='CNPJ inválido. Use o formato 00.000.000/0000-00'
+        )
+    ]
+)
     endereco = models.CharField(max_length=255)
     telefone = models.CharField(
     max_length=15,
@@ -17,7 +26,7 @@ class Empresa(models.Model):
     ]
 )
     emailContato = models.EmailField(max_length=30,unique=True)
-    
+
     class Meta:
         verbose_name = 'Empresa'
         verbose_name_plural = 'Empresas'
