@@ -18,7 +18,6 @@ class Chamado {
   - status : String
   - dataAbertura : Date
   - dataFechamento : Date
-  - ans : ANS
   - prioridade : Prioridade
   - cliente : Cliente
   + adicionarComentario() : void

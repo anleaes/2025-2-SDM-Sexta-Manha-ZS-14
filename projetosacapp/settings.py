@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'clientes.apps.ClientesConfig',
     'atendimentos.apps.AtendimentosConfig',
     'avaliacoes.apps.AvaliacoesConfig',
+    'prioridades.apps.PrioridadesConfig',
+
     
 
 ]
