@@ -22,4 +22,4 @@ class Departamento(models.Model):
         ordering =['id']
 
     def __str__(self):
-        return f"{self.nome}" - f"{self.telefoneContato}"
+        return f'{self.nome} - {self.telefoneContato}'
