@@ -1,3 +1,5 @@
 /projetosacapp/__pycache__/*
 /apps/clientes/__pycache__/*
 /apps/clientes/migrations/*
+/apps/atendimento/__pycache__/*
+/apps/atendimento/migrations/*
