@@ -4,3 +4,7 @@ from .models import Empresa
 from .serializer import EmpresaSerializer
 
 # Create your views here.
+
+class EmpresaViewSet(viewsets.ModelViewSet):
+    queryset = Empresa.objects.all()
+    serializer_class = EmpresaSerializer 
