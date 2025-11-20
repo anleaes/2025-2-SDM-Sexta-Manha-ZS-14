@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'prioridades.apps.PrioridadesConfig',
     'chamados.apps.ChamadosConfig',
     'departamentos.apps.DepartamentosConfig',
+    'empresas.apps.EmpresasConfig',
 
     
 
