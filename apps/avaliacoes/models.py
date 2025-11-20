@@ -5,7 +5,7 @@ from atendimentos.models import Atendimento
 # Create your models here.
 
 class Avaliacao(models.Model):
-    nota = models.CharField('Nota', max_length=20)
+    nota = models.CharField('Nota', max_length=20, choices=[('Excelente', 'Excelente'), ('Bom', 'Bom'), ('Regular', 'Regular'), ('Ruim', 'Ruim'), ('Pessimo', 'Pessimo')])
     comentario = models.TextField('Comentario', max_length=500)
     dataAvaliacao = models.DateField('Data da Avaliacao')
     clientes = models.ForeignKey(Cliente, on_delete=models.CASCADE)
@@ -17,4 +17,4 @@ class Avaliacao(models.Model):
         ordering =['id']
 
     def __str__(self):
-        return f"self.nota - {self.clientes}"
+        return self.clientes
