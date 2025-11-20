@@ -45,6 +45,13 @@ INSTALLED_APPS = [
     'rest_framework',
     'clientes.apps.ClientesConfig',
     'atendimentos.apps.AtendimentosConfig',
+    'avaliacoes.apps.AvaliacoesConfig',
+    'prioridades.apps.PrioridadesConfig',
+    'chamados.apps.ChamadosConfig',
+    'departamentos.apps.DepartamentosConfig',
+    'empresas.apps.EmpresasConfig',
+    'atendentes.apps.AtendentesConfig',
+
     
 
 ]

@@ -3,3 +3,15 @@
 /apps/clientes/migrations/*
 /apps/atendimento/__pycache__/*
 /apps/atendimento/migrations/*
+/apps/avaliacao/__pycache__/*
+/apps/avaliacao/migrations/*
+/apps/prioridades/__pycache__/*
+/apps/prioridades/migrations/*
+/apps/chamados/__pycache__/*
+/apps/chamados/migrations/*
+/apps/departamentos/__pycache__/*
+/apps/departamentos/migrations/*
+/apps/empresas/__pycache__/*
+/apps/empresas/migrations/*
+/apps/atendentes/__pycache__/*
+/apps/atendentes/migrations/*
